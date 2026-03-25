@@ -59,12 +59,6 @@ const AllApps = () => {
 
                 <div className="flex justify-between items-start mb-4">
                     <h3 className="font-bold text-slate-800 truncate pr-2">{app.title}</h3>
-                    <button 
-                        onClick={(e) => handleQuickInstall(e, app)}
-                        className={`p-1.5 rounded-full ${isInstalled ? 'text-green-500 bg-green-50' : 'text-purple-600 bg-purple-50 hover:bg-purple-100'}`}
-                    >
-                        {isInstalled ? <CheckCircle size={18}/> : <Plus size={18}/>}
-                    </button>
                 </div>
 
                 <div className="flex justify-between items-center">

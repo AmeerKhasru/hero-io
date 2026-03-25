@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { Download, Star, MessageSquare, CheckCircle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell } from 'recharts';
 import { setLocalStorageItem, getLocalStorageItem } from '../../library/utils';
+import { toast, ToastContainer } from 'react-toastify';
 
 const AppDetails = () => {
     const { id } = useParams();
@@ -36,15 +37,18 @@ const AppDetails = () => {
         if (!alreadyInstalled) {
             const updatedApps = [...storedApps, app];
             setLocalStorageItem('installed-apps', updatedApps);
-            setIsInstalled(true); 
-            alert(`${app.title} installed successfully!`);
+            setIsInstalled(true);
+            toast.success(`${app.title} installed successfully!`, {
+                
+                icon: "🚀"
+            });
         }
     };
 
     return (
         <div className="bg-[#F8FAFC] min-h-screen pb-20 pt-10">
             <div className="max-w-6xl mx-auto px-4">
-                
+
                 {/* --- TOP HERO SECTION --- */}
                 <div className="bg-white border border-slate-100 rounded-xl p-8 mb-8 flex flex-col md:flex-row gap-10 items-center md:items-start shadow-sm">
                     <div className="w-52 h-52 bg-white border border-slate-100 rounded-3xl shadow-sm flex items-center justify-center p-6">
@@ -77,16 +81,16 @@ const AppDetails = () => {
 
                         {/* --- CONDITIONAL BUTTON RENDER --- */}
                         {isInstalled ? (
-                            <button 
-                                disabled 
+                            <button
+                                disabled
                                 className="btn btn-disabled bg-slate-200 text-slate-400 px-10 normal-case font-bold rounded-lg border-none flex items-center gap-2"
                             >
                                 <CheckCircle size={18} />
                                 Installed
                             </button>
                         ) : (
-                            <button 
-                                onClick={handleInstall} 
+                            <button
+                                onClick={handleInstall}
                                 className="btn bg-[#00D991] hover:bg-[#00c080] border-none text-white px-10 normal-case font-bold rounded-lg shadow-sm"
                             >
                                 Install Now {app.size} MB

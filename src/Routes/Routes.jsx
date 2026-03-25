@@ -1,5 +1,6 @@
 import React from 'react';
-import { createBrowserRouter } from "react-router";
+// Changed from "react-router" to "react-router-dom"
+import { createBrowserRouter } from "react-router-dom"; 
 import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/ErrorPages/ErrorPage';
 import Home from '../Pages/Home/Home';
@@ -18,26 +19,21 @@ export const router = createBrowserRouter([
                 element: <Home />,
                 loader: async () => {
                     const res = await fetch('/trendingApps.json');
-
+                    if (!res.ok) throw new Error("Failed to load trending apps");
                     return res.json();
                 }
             },
-
             {
                 path: "all-apps",
-                element: <AllApps></AllApps>,
-                loader: async () => {
-                    const res = await fetch('/allApps.json');
-                    return res.json();
-                }
+                element: <AllApps />,
+                loader: () => fetch('/allApps.json')
             },
-
             {
-                path: "/installed-apps",
-                element: <InstalledApps></InstalledApps>,
+            
+                path: "installed-apps", 
+                element: <InstalledApps />,
                 loader: () => fetch("/allApps.json"),
             },
-
             {
                 path: "app/:id",
                 element: <AppDetails />,

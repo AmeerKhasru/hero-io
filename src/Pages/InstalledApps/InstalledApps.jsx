@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Star, ChevronDown } from 'lucide-react';
 import { getLocalStorageItem, setLocalStorageItem } from '../../library/utils';
+import { toast } from 'react-toastify';
 
 const InstalledApps = () => {
-    // 1. Initialize state as an empty array
+    
     const [installedApps, setInstalledApps] = useState([]);
 
-    // 2. Load data from LocalStorage on mount
+    
     useEffect(() => {
         const stored = getLocalStorageItem('installed-apps');
         if (stored) {
@@ -14,12 +15,19 @@ const InstalledApps = () => {
         }
     }, []);
 
-    // 3. Handle Uninstall (Remove from UI and LocalStorage)
+    
     const handleUninstall = (id) => {
         const updatedList = installedApps.filter(app => app.id !== id);
         setInstalledApps(updatedList);
+
+           toast.error('Uninstalled!', {
+        position: "bottom-right",
+        icon: "🗑️", 
+        theme: "colored"
+    });
         // Save the updated list back to storage
         setLocalStorageItem('installed-apps', updatedList);
+     
     };
 
     return (
