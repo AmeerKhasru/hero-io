@@ -26,7 +26,7 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink 
-                    to="/installation" 
+                    to="/installed-apps" 
                     className="hover:text-purple-600 hover:border-b-2 hover:border-purple-600 hover:rounded-none bg-transparent"
                 >
                     Installation

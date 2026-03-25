@@ -4,32 +4,45 @@ import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/ErrorPages/ErrorPage';
 import Home from '../Pages/Home/Home';
 import AllApps from '../Pages/AllApps/AllApps';
+import AppDetails from '../Pages/AppDetails/AppDetails';
+import InstalledApps from '../Pages/InstalledApps/InstalledApps';
 
+export const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+                loader: async () => {
+                    const res = await fetch('/trendingApps.json');
 
-export const router = createBrowserRouter([ 
-      {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true, 
-        element: <Home />,
-        loader: async () => {
-          const res = await fetch ('/trendingApps.json');
-         
-          return res.json();
-        }
-      },
+                    return res.json();
+                }
+            },
 
-      {
-        path: "all-apps",
-        element: <AllApps></AllApps>,
-        loader: async () => {
-          const res = await fetch('/allApps.json');
-          return res.json();
-        }
-      }
-    ]
-  },
+            {
+                path: "all-apps",
+                element: <AllApps></AllApps>,
+                loader: async () => {
+                    const res = await fetch('/allApps.json');
+                    return res.json();
+                }
+            },
+
+            {
+                path: "/installed-apps",
+                element: <InstalledApps></InstalledApps>,
+                loader: () => fetch("/allApps.json"),
+            },
+
+            {
+                path: "app/:id",
+                element: <AppDetails />,
+                loader: () => fetch('/allApps.json')
+            }
+        ]
+    },
 ]);

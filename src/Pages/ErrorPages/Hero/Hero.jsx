@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Apple } from 'lucide-react'; // Import the icons
+import { Play, Apple } from 'lucide-react'; 
 
 const Hero = () => {
     return (
@@ -21,24 +21,40 @@ const Hero = () => {
                 <div className="flex flex-wrap justify-center gap-4 mb-16">
 
                     {/* Google Play Button */}
-                    <button className="btn btn-outline btn-lg bg-base-100 border-base-300 hover:bg-base-200 h-auto py-3 px-6 shadow-sm group">
-                        <Play
-                            className="size-8 text-success fill-success transition-transform group-hover:scale-110"
-                        />
-                        <div>
-                            <span className="text-lg font-bold">Google Play</span>
-                        </div>
-                    </button>
+                    <a
+                        href="https://play.google.com/store/apps"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                    >
+                        <button className="btn btn-outline btn-lg bg-base-100 border-base-300 hover:bg-base-200 h-auto py-3 px-6 shadow-sm group">
+                            <Play
+                                className="size-8 text-success fill-success transition-transform group-hover:scale-110"
+                            />
+                            <div className="text-left ml-2">
+                                <p className="text-[10px] uppercase font-bold text-slate-400 leading-none">Get it on</p>
+                                <span className="text-lg font-bold">Google Play</span>
+                            </div>
+                        </button>
+                    </a>
 
                     {/* App Store Button */}
-                    <button className="btn btn-outline btn-lg bg-base-100 border-base-300 hover:bg-base-200 h-auto py-3 px-6 shadow-sm group">
-                        <Apple
-                            className="size-8 fill-current transition-transform group-hover:scale-110"
-                        />
-                        <div>
-                            <span className="text-lg font-bold">App Store</span>
-                        </div>
-                    </button>
+                    <a
+                        href="https://www.apple.com/app-store/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                    >
+                        <button className="btn btn-outline btn-lg bg-base-100 border-base-300 hover:bg-base-200 h-auto py-3 px-6 shadow-sm group flex items-center gap-3">
+                            <Apple
+                                className="size-8 fill-current transition-transform group-hover:scale-110"
+                            />
+                            <div className="text-left">
+                                <p className="text-[10px] uppercase font-bold text-slate-400 leading-none">Download on the</p>
+                                <span className="text-lg font-bold">App Store</span>
+                            </div>
+                        </button>
+                    </a>
 
                 </div>
 
