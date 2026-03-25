@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "FocusFlow",
+    "companyName": "Hero.io Labs",
+    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80",
+    "description": "A minimalist task manager designed to eliminate distractions and help you achieve deep work states effortlessly.",
+    "size": 45,
+    "reviews": 1240,
+    "ratingAvg": 4.8,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 50 },
+      { "name": "4 star", "count": 240 },
+      { "name": "5 star", "count": 900 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Zenith Calendar",
+    "companyName": "Nova Systems",
+    "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
+    "description": "Smart scheduling that uses AI to find the perfect balance between your meetings and personal growth time.",
+    "size": 32,
+    "reviews": 850,
+    "ratingAvg": 4.5,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 400 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "CodeSprint",
+    "companyName": "DevTools Corp",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    "description": "The ultimate mobile IDE for developers on the go. Compile, debug, and push to GitHub from anywhere.",
+    "size": 120,
+    "reviews": 3200,
+    "ratingAvg": 4.9,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 2600 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "HealthPulse",
+    "companyName": "Vitality Tech",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    "description": "Track your nutrition, sleep, and heart rate with medical-grade precision and personalized health insights.",
+    "size": 55,
+    "reviews": 2100,
+    "ratingAvg": 4.7,
+    "downloads": 750000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1400 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "SwiftCart Admin",
+    "companyName": "RetailGo",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    "description": "Manage your e-commerce empire from your pocket. Inventory, orders, and analytics in real-time.",
+    "size": 68,
+    "reviews": 450,
+    "ratingAvg": 4.2,
+    "downloads": 85000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 80 },
+      { "name": "4 star", "count": 100 },
+      { "name": "5 star", "count": 200 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "MindGraph",
+    "companyName": "Creativity Ltd",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    "description": "A powerful mind-mapping tool that converts your messy thoughts into structured, actionable project plans.",
+    "size": 38,
+    "reviews": 1100,
+    "ratingAvg": 4.6,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "VaultKey",
+    "companyName": "SecurePath",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "description": "Military-grade encryption for your passwords and sensitive documents with zero-knowledge architecture.",
+    "size": 25,
+    "reviews": 5600,
+    "ratingAvg": 4.9,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 85 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "AirStream VPN",
+    "companyName": "NetShield",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "description": "Ultra-fast global servers that protect your privacy without slowing down your connection speed.",
+    "size": 42,
+    "reviews": 980,
+    "ratingAvg": 4.4,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 130 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 500 }
+    ]
+  }
+]
