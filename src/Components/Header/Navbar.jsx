@@ -58,7 +58,7 @@ const Navbar = () => {
             {/* Navbar End: Contribute Button */}
             <div className="navbar-end gap-2">
                 <a 
-                    href="https://github.com/AmeerKhasru/hero-io" 
+                    href="https://github.com/AmeerKhasru" 
                     target="_blank" 
                     rel="noreferrer" 
                     className="btn btn-sm md:btn-md bg-[#9333EA] hover:bg-[#7e22ce] text-white border-none normal-case rounded-lg px-6"

@@ -17,9 +17,18 @@ const TrendingApps = () => {
                 {/* Apps Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {apps && apps.map((app) => (
-                        <div key={app.id} className="card bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer rounded-2xl overflow-hidden group">
+                        /* Wrapped in Link to connect to AppDetails */
+                        <Link 
+                            to={`/app/${app.id}`} 
+                            key={app.id} 
+                            className="card bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all cursor-pointer rounded-2xl overflow-hidden group"
+                        >
                             <figure className="px-4 pt-4">
-                                <img src={app.image} alt={app.title} className="rounded-xl h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                                <img 
+                                    src={app.image} 
+                                    alt={app.title} 
+                                    className="rounded-xl h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                                />
                             </figure>
                             <div className="card-body p-5">
                                 <h3 className="card-title text-lg font-bold text-slate-800 mb-3">{app.title}</h3>
@@ -34,7 +43,7 @@ const TrendingApps = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
