@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Apple } from 'lucide-react'; 
+import { Play, Apple } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -57,11 +57,15 @@ const Hero = () => {
                 </div>
 
                 {/* Hero Image Container */}
-                <div className="relative max-w-[900px] mx-auto">
+                <div className="relative max-w-[900px] mx-auto flex justify-center items-center bg-slate-200 animate-pulse rounded-2xl overflow-hidden">
                     <img
-                        src="/src/assets/hero.png"
-                        alt="Hero Mockup"
-                        className="w-full h-auto drop-shadow-xl"
+                        src="https://i.ibb.co.com/jP2MKPkP/hero.png" // Added 'i.' and '.png'
+                        alt="Hero"
+                        onLoad={(e) => {
+                            e.target.parentNode.classList.remove('animate-pulse', 'bg-slate-200');
+                            e.target.classList.remove('opacity-0'); // Actually make it visible on load
+                        }}
+                        className=" w-100 h-100 center opacity-0 transition-opacity duration-500"
                     />
                 </div>
             </div>

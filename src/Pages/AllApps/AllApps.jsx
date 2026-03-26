@@ -50,8 +50,17 @@ const AllApps = () => {
         </div>
 
         {filteredApps.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-slate-300">
-            <p className="text-slate-400 text-lg">No results match your search query.</p>
+          <div className="flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-slate-300">
+            <img
+              src="https://i.ibb.co.com/FbddkM5r/no-results.png"
+              alt="No search results found"
+              className="w-64 h-64 object-contain mb-6 opacity-80"
+            />
+
+            <h3 className="text-xl font-bold text-slate-700 mb-1">No Apps Found</h3>
+            <p className="text-slate-400 text-lg">
+              No results match your search query: <span className="text-purple-600 font-semibold italic">"{searchQuery}"</span>
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

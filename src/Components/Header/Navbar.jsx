@@ -5,9 +5,9 @@ const Navbar = () => {
     const links = (
         <>
             <li>
-                <NavLink 
-                    to="/" 
-                    className={({ isActive }) => 
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
                         `hover:text-purple-600 hover:border-b-2 hover:border-purple-600 hover:rounded-none bg-transparent ${isActive ? 'text-purple-600 border-b-2 border-purple-600' : ''}`
                     }
                 >
@@ -15,9 +15,9 @@ const Navbar = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink 
-                    to="/all-apps" 
-                    className={({ isActive }) => 
+                <NavLink
+                    to="/all-apps"
+                    className={({ isActive }) =>
                         `hover:text-purple-600 hover:border-b-2 hover:border-purple-600 hover:rounded-none bg-transparent ${isActive ? 'text-purple-600 border-b-2 border-purple-600' : ''}`
                     }
                 >
@@ -25,8 +25,8 @@ const Navbar = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink 
-                    to="/installed-apps" 
+                <NavLink
+                    to="/installed-apps"
                     className="hover:text-purple-600 hover:border-b-2 hover:border-purple-600 hover:rounded-none bg-transparent"
                 >
                     Installation
@@ -42,7 +42,10 @@ const Navbar = () => {
                 {/* Wrapped logo and text in Link to go Home */}
                 <Link to="/" className="flex items-center gap-2 cursor-pointer">
                     <div className="w-8 h-8 flex items-center justify-center">
-                        <img src="/src/assets/logo.png" alt="Hero.io Logo" />
+                        <img
+                            src="https://i.ibb.co.com/N2Dv3Z2n/logo.png"
+                            alt="Hero.io Logo"
+                        />
                     </div>
                     <span className="text-xl font-bold tracking-tight text-purple-600">HERO.IO</span>
                 </Link>
@@ -57,10 +60,10 @@ const Navbar = () => {
 
             {/* Navbar End: Contribute Button */}
             <div className="navbar-end gap-2">
-                <a 
-                    href="https://github.com/AmeerKhasru" 
-                    target="_blank" 
-                    rel="noreferrer" 
+                <a
+                    href="https://github.com/AmeerKhasru"
+                    target="_blank"
+                    rel="noreferrer"
                     className="btn btn-sm md:btn-md bg-[#9333EA] hover:bg-[#7e22ce] text-white border-none normal-case rounded-lg px-6"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mr-2" viewBox="0 0 16 16">
