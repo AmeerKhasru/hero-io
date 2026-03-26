@@ -32,7 +32,6 @@ const Hero = () => {
                                 className="size-8 text-success fill-success transition-transform group-hover:scale-110"
                             />
                             <div className="text-left ml-2">
-                                <p className="text-[10px] uppercase font-bold text-slate-400 leading-none">Get it on</p>
                                 <span className="text-lg font-bold">Google Play</span>
                             </div>
                         </button>
@@ -50,7 +49,6 @@ const Hero = () => {
                                 className="size-8 fill-current transition-transform group-hover:scale-110"
                             />
                             <div className="text-left">
-                                <p className="text-[10px] uppercase font-bold text-slate-400 leading-none">Download on the</p>
                                 <span className="text-lg font-bold">App Store</span>
                             </div>
                         </button>

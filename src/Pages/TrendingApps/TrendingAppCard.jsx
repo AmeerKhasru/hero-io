@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Star, CheckCircle, Plus } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; // 1. Add this
+import { useNavigate } from 'react-router-dom'; 
 import { getLocalStorageItem, setLocalStorageItem } from '../../library/utils';
 
 const TrendingAppCard = ({ app }) => {
     const [isInstalled, setIsInstalled] = useState(false);
-    const navigate = useNavigate(); // 2. Initialize
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const storedApps = getLocalStorageItem('installed-apps') || [];
@@ -14,7 +14,7 @@ const TrendingAppCard = ({ app }) => {
     }, [app.id]);
 
     const handleInstall = (e) => {
-        e.stopPropagation(); // 3. CRITICAL: Stops the card click from firing
+        e.stopPropagation(); 
         const storedApps = getLocalStorageItem('installed-apps') || [];
         if (!isInstalled) {
             const updatedApps = [...storedApps, app];
@@ -25,7 +25,7 @@ const TrendingAppCard = ({ app }) => {
 
     return (
         <div 
-            onClick={() => navigate(`/app/${app.id}`)} // 4. Navigate on card click
+            onClick={() => navigate(`/app/${app.id}`)} 
             className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all cursor-pointer group"
         >
             <div className="flex items-center gap-4 mb-4">
