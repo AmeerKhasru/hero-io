@@ -1,4 +1,4 @@
-Here is the core technology stack used in your Hero-IO project:
+Here is the core technology stack used in my Hero-IO project:
 
 React.js (Frontend Library)
 
